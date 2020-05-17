@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<head>
+<link rel="stylesheet" type="text/css" href="Testcss.css">
+</head>
+<body style="background-color:lightgrey">
+	<div class="div_body">
+		<center>
+			<p style="font-size:2vw; color:grey;">To Do List</p>
+		</center>
+		<center>
+			<div class="input_area">
+				<input type="text" id="userinput" class="textview" placeholder="Type your To Do List"><span class="add_button" type="button" value="+" onclick="AddElement()">+</span>
+			</div>
+		</center>
+	<center><div class="setborder">.</div></center>
+	
+		<ul id="makelist">
+			<li>Morning Breakfast</li>
+			<li>Workout</li>
+			<li>Bath</li>
+			<li>Study</li>
+		</ul>
+    
+	<center><div class="setborder">.</div></center>
+	
+	<div>
+		<p  class="task_align">Task left : <span id="total">4</span> </p>
+		<p  class="task_complete">All Uncomplete Complete</p>
+	</div>
+	
+	</div>
+<script>
+
+var total=document.getElementById('total');
+
+function getCount()
+{
+console.log(count);
+}
+function AddElement()
+{
+
+	var create_list=document.createElement("li");
+	var uservalue=document.getElementById("userinput").value;
+	var listitem=document.createTextNode(uservalue);
+	create_list.appendChild(listitem);
+	if(uservalue!="")
+	{
+	total.textContent = +total.textContent + 1;
+	document.getElementById("makelist").appendChild(create_list);
+		document.getElementById("userinput").value="";
+	}
+	
+}
+
+
+var create_delete=document.getElementsByTagName("li");
+for (var i=0;i<create_delete.length;i++) {
+  var span=document.createElement("SPAN");
+  var btn=document.createElement("BUTTON");
+  btn.innerHTML="X";
+  span.className="delete_button";
+  span.appendChild(btn);
+  create_delete[i].appendChild(span);
+}
+
+
+var delet_list=document.getElementsByClassName("delete_button");
+
+for (var i=0;i<delet_list.length;i++) {
+  delet_list[i].onclick=function() {
+    var div=this.parentElement;
+    div.style.display="none";
+  }
+} 
+
+
+
+
+</script>
+	
+	
+</body>
+</html>

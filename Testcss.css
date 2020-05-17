@@ -1,0 +1,79 @@
+.div_body{
+	background-color:white;
+	width:40vw;
+	height:auto;
+	border-radius:25px;
+}
+.input_area{
+	width:35vw;
+	height:10vh;
+	border-radius:20px;
+	background-color:#DEDEDE;
+}
+.textview{
+	width:32vw;
+	height:9.5vh;
+	background-color:#DEDEDE;
+	border-radius:20px 0px 0px 20px;
+	border:transparent;
+	outline:none;
+	font-size:20px;
+}
+.add_button{
+	background-color:#DEDEDE;
+	outline:none;
+	border:transparent;
+	border-radius:0px 20px 20px 0px;
+	width:6vw;
+	height:10vh;
+	font-size:3vw;	
+}
+#makelist {
+	margin-left:5%;
+	list-style-type:circle;
+	font-size:1.5vw;
+}
+.delete_button{
+	position:absolute;
+	left:30%;
+	border:transparent;
+}
+.delete_button:hover{
+	background-color:none;
+	color:white;
+}
+.setborder{
+	margin-top:2%;
+	width:35vw;
+	height:.2vh;
+	border-radius:50px;
+	background-color:lightgrey;
+	color:grey;
+}
+button{
+	outline:none;
+	border:none;
+	background-color:lightgrey;
+	border-radius:50%;
+	font-size:1vw;
+	width:1.5vw;
+	height:3vh;
+	padding:1%;
+	margin-top:1%;
+}
+button:hover{
+	color:white;
+	background-color:#DEDEDE;
+	border-radius:50%;
+}
+.task_align{
+	color:grey;
+	margin-left:10%;
+	margin-top:1%;
+}
+.task_complete{
+	color:grey;
+	float:right;
+	margin-top:-5.5%;
+	margin-right:10%;
+}
